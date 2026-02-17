@@ -223,7 +223,7 @@ TerraOS is built on three core pillars:
 
 ### Multi-Lingual & Voice-First Accessibility
 
-**Prototype Phase (4 weeks)**:
+**Prototype Phase**:
 - **English**: Full support (UI + AI responses)
 - **Hindi**: UI strings translated, AI responses in English with Hindi glossary for technical terms
 - **Text-to-Speech**: Basic TTS for reading recommendations aloud (Android native TTS)
@@ -521,9 +521,9 @@ Reasoning           Pattern
 
 ### Prototype vs Production Comparison
 
-| Aspect | Prototype (4 Weeks) | Production (6-12 Months) |
+| Aspect | Prototype  | Production (6-8 Months) |
 |--------|---------------------|--------------------------|
-| **AI Models** | Claude 3.5 Sonnet (all agents) | Mixed: Haiku + Sonnet (optimized) |
+| **AI Models** | Claude  | Mixed: Haiku + Sonnet (optimized) |
 | **Response Time** | < 60 seconds (95th percentile) | < 30 seconds (95th percentile) |
 | **Input Method** | Manual entry  | Manual + OCR (Textract) |
 | **Mobile Platform** | Android only, online-only | Android + iOS, offline-first |
@@ -1110,7 +1110,7 @@ Failover Strategy:
 
 ## Performance Targets
 
-### Prototype Phase (4 weeks)
+### Prototype Phase
 - Total processing time (95th percentile): < 60 seconds
 - Agent 1: < 10 sec
 - Agents 2 & 3 (parallel): < 15 sec
@@ -1379,14 +1379,6 @@ Log entries include: timestamp, level, execution_id, user_id, farm_id, agent nam
 - Visualizes parallel vs sequential execution
 - Highlights cold starts and retries
 
-**Trace Retention**: 7 days
-
-**Sample Trace Analysis**:
-- Total execution time: 5.8s
-- Bedrock invocations: 5 (1.2s, 1.5s, 1.3s, 1.4s, 1.1s)
-- DynamoDB operations: 8 (50ms average)
-- S3 operations: 2 (100ms average)
-
 ### Alerts for Degraded Intelligence
 
 **CloudWatch Alarms**:
@@ -1456,7 +1448,7 @@ Log entries include: timestamp, level, execution_id, user_id, farm_id, agent nam
 
 **Cost Optimization Levers**:
 1. **Prototype**: Single model (Sonnet) for simplicity
-2. **Production Phase 1**: Use cheaper models (Haiku instead of Sonnet) for Agents 1, 3, 5
+2. **Production Phase 1**: Can use cheaper models (Haiku instead of Sonnet) for Agents 1, 3, 5
 3. **Production Phase 1**: Reduce token usage through prompt optimization
 4. **Production Phase 1**: Cache frequently used data in Lambda environment
 5. **Production Phase 2**: Batch processing for non-urgent reports
@@ -1566,11 +1558,10 @@ This approach ensures farmers can act on recommendations without TerraOS becomin
 **Scope**:
 - Manual soil data entry only (no OCR)
 - Single report generation (no batch processing)
-- Single AI model: Claude 3.5 Sonnet for all 5 agents
+- Single AI : Claude for all 5 agents
 - Basic mobile app (Android only, online-only)
 - **Bilingual support: English + Hindi** (UI strings in Hindi, AI responses in English with Hindi glossary)
 - Mumbai region (ap-south-1) only
-- Response time target: < 60 seconds (95th percentile)
 
 **Features Included**:
 - All 5 AI agents (Nutrient, Ecosystem, Historical, Regenerative, Carbon)
@@ -1836,5 +1827,6 @@ Government lab integration flow:
 
 
 ---
+
 
 **End of Document**
