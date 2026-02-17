@@ -46,7 +46,6 @@ Imagine a farmer gets a basic soil test that only tells them nitrogen, phosphoru
 
 ### Hackathon Prototype Scope
 
-**Timeline**: 4 weeks (Prototype Phase)
 
 **Core Features to Demonstrate:**
 1. **3-Agent System** (simplified from 5 agents for prototype):
@@ -372,7 +371,7 @@ AWS Lambda (API Handler)
     ↓
 AWS Step Functions (Multi-Agent Orchestration)
     ↓
-├─→ Amazon Bedrock (Claude Sonnet 4 / Haiku)
+├─→ Amazon Bedrock (Claude)
 ├─→ Amazon Q Developer (Knowledge Retrieval)
 ├─→ Amazon S3 (historical regional baseline data – probabilistic, non-field-level)
 ├─→ Amazon DynamoDB (Historical soil data, user profiles)
@@ -387,7 +386,7 @@ User (Mobile App)
 
 | Service | Purpose | Configuration |
 |---------|---------|---------------|
-| **Amazon Bedrock** | LLM inference for all 5 agents | Claude Sonnet 3.5 (Agents 1, 2, 4), Claude Haiku (Agents 3, 5) |
+| **Amazon Bedrock** | LLM inference for all 5 agents | Claude |
 | **Amazon Q Developer** | Knowledge base for soil chemistry, regenerative agriculture, carbon accounting | Custom knowledge bases with domain-specific documentation |
 | **AWS Step Functions** | Multi-agent workflow orchestration | Express Workflows for <30s response time |
 | **AWS Lambda** | Agent execution, API handlers, data preprocessing | Python 3.12, 3GB memory, 60s timeout per agent |
@@ -417,7 +416,7 @@ User (Mobile App)
 
 ## 8. Data Sources & Integrations
 
-### External Data Sources
+### External Data Sources(if needed)
 
 | Source | Purpose | Integration Method | Update Frequency |
 |--------|---------|-------------------|------------------|
@@ -737,7 +736,7 @@ User (Mobile App)
 
 ## 15. Delivery Phases
 
-### Phase 1 – MVP (3 weeks)
+### Phase 1 – MVP 
 
 **Scope:**
 - Core multi-agent system (Agents 1–5)
@@ -759,7 +758,7 @@ User (Mobile App)
 - Basic documentation
 
 
-### Phase 2 – Enhanced Intelligence (3 weeks)
+### Phase 2 – Enhanced Intelligence 
 
 **Scope:**
 - Additional language support (Marathi, Kannada, Punjabi, Telugu)
@@ -774,7 +773,7 @@ User (Mobile App)
 - Multilingual app with voice support
 - Enhanced agent intelligence with data sources
 
-### Phase 3 – Scale & Optimization (2 weeks)
+### Phase 3 – Scale & Optimization 
 
 **Scope:**
 - Performance optimization (sub-20-second response time)
@@ -797,7 +796,6 @@ User (Mobile App)
 | Metric | Target | Measurement Method |
 |--------|--------|-------------------|
 | **Inference accuracy** | > 85% match with lab analysis for inferred parameters | Validation against 500 comprehensive soil reports |
-| **Response time** | < 30 seconds (95th percentile) | CloudWatch metrics |
 | **System uptime** | > 99.9% | CloudWatch alarms |
 | **Agent success rate** | > 98% (Agents 1, 4), > 95% (Agents 2, 3, 5) | Step Functions execution logs |
 | **API latency** | < 200ms (excluding agent processing) | API Gateway metrics |
@@ -820,7 +818,7 @@ User (Mobile App)
 | **Practice adoption** | 50% of users adopt at least 2 regenerative practices | App tracking data |
 
 
-### 16.4 User Satisfaction Metrics
+### 16.4 User Satisfaction Metrics( future)
 
 | Metric | Target |
 |--------|--------|
@@ -929,3 +927,4 @@ User (Mobile App)
 ---
 
 **End of Requirements Specification**
+
