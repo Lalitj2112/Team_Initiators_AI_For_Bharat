@@ -25,7 +25,8 @@
 - [Hackathon Highlights](#-hackathon-highlights)
 
 ---
-
+## Working prototype Link: https://staging.d28ia31ykc2cct.amplifyapp.com/
+## Working prototype video Link : https://www.youtube.com/watch?v=r4Wn0s9ZVGU
 ## 🌱 What is TerraOS?
 
 TerraOS transforms basic soil test values (N, P, K, pH) into a comprehensive agricultural intelligence report in under **couple of minutes** — powered by a 5-agent Amazon Bedrock pipeline running on AWS serverless infrastructure.
